@@ -26,14 +26,15 @@
   "homepage": "https://github.com/krausest/js-framework-benchmark#readme",
   "dependencies": {
     "local-web-server": "^2.6.0",
-    "podeem": "0.0.1"
+    "podeem": "0.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "7.0.0-bridge.0",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-es2016": "^6.24.1",
     "rollup": "^0.58.2",
-    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-babel": "^4.1.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-minifyliterals": "^1.1.0",
     "rollup-plugin-node-resolve": "^3.3.0",

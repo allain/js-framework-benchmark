@@ -1,6 +1,5 @@
 'use strict'
 
-import * as path from 'path'
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
@@ -21,16 +20,19 @@ export default {
       jsnext: true,
       browser: true
     }),
-    commonjs({
-      namedExports: {
-        podeem: ['default']
-      }
-    }),
+    commonjs(),
     minifyliterals(),
     babel({
       exclude: 'node_modules/**',
-      presets: [['es2016']],
-      plugins: ['external-helpers'],
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            modules: false,
+            targets: '> 0.25%, not dead'
+          }
+        ]
+      ],
       runtimeHelpers: true,
       babelrc: false
     }),
